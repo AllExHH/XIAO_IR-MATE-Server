@@ -1,0 +1,15 @@
+# ESP32-C3 Custom Partition Table for XIAO IR Mate Bridge
+# Vergrößerte NVS-Partition für mehr IR-Slots
+#
+# Standard ESP32-C3 hat NVS = 0x6000 (24KB)
+# Diese Tabelle erweitert NVS auf 0x10000 (64KB) → ~100+ IR-Slots möglich
+#
+# Um diese Partition zu verwenden, in platformio.ini eintragen:
+#   board_build.partitions = partitions.csv
+
+# Name,    Type, SubType, Offset,  Size,    Flags
+nvs,       data, nvs,     0x9000,  0x10000,
+otadata,   data, ota,     0x19000, 0x2000,
+app0,      app,  ota_0,   0x20000, 0x140000,
+app1,      app,  ota_1,   0x160000,0x140000,
+spiffs,    data, spiffs,  0x2A0000,0x160000,

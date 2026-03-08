@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "nvs": {
+    "pythonPath": "",
+    "pythonUseCustom": false,
+    "port": "",
+    "chip": "esp32",
+    "baud": 460800,
+    "offset": "0x9000",
+    "size": "0x6000",
+    "before": "default_reset",
+    "after": "hard_reset",
+    "connectAttempts": 3,
+    "flashMode": "dio",
+    "flashFreq": "80m",
+    "flashSize": "16MB",
+    "entries": [
+      {
+        "namespace": "wifi_config",
+        "key": "ssid",
+        "value": ""
+      },
+      {
+        "namespace": "wifi_config",
+        "key": "password",
+        "value": ""
+      }
+    ]
+  },
+  "combineBin": {
+    "pythonPath": "",
+    "pythonUseCustom": false,
+    "port": "",
+    "baud": 460800,
+    "before": "default_reset",
+    "after": "hard_reset",
+    "connectAttempts": 3,
+    "chip": "auto",
+    "flashMode": "dio",
+    "flashFreq": "80m",
+    "flashSize": "16MB",
+    "autoOpenMonitor": true,
+    "monitorBaud": 115200,
+    "buildDir": "",
+    "mappings": []
+  },
+  "advancedName": {
+    "variables": [],
+    "entries": [],
+    "export": {
+      "sourceMode": "bin",
+      "buildDir": "",
+      "buildBinPath": "",
+      "sourceBinPath": "",
+      "outputDir": "",
+      "sanitizeFileName": true,
+      "conflictPolicy": "ask"
+    }
+  }
+}
